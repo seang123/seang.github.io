@@ -2,6 +2,8 @@ html{
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     color: #333;
+    /*background-color: #EEEEEE;*/
+    background-color: #FAF9F6; /* off-white */
     font-family: Georgia, serif;
     font-size: 62.5%;
     line-height: 1.375
@@ -27,6 +29,10 @@ small {
 /* Adding hidden to a html tag will remove it */
 [hidden] {
     display: none
+}
+
+[underline]{
+    text-decoration: underline;
 }
 
 .nav-link {
@@ -96,7 +102,8 @@ h6,
 
 h1,
 .h1 {
-    color: #121212;
+    /*color: #121212;*/
+    color: #292929;
     font-size: 2em;
     margin: .5em 0
 }
@@ -110,14 +117,16 @@ h2,
 
 h3,
 .h3 {
-    color: #121212;
+    /*color: #121212;*/
+    color: #444;
     font-size: 1.2em;
     margin: 1.666666em 0 .833333em
 }
 
 h4,
 .h4 {
-    color: #121212;
+    /*color: #121212;*/
+    color: #444;
     font-size: 1em;
     letter-spacing: .025em;
     text-transform: uppercase;
@@ -150,6 +159,7 @@ footer {
 }
 */
 
+/*
 ul.posts {
     margin: 20px auto 40px;
     font-size: 1.5em;
@@ -157,6 +167,81 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+*/
+
+
+/* ---------------- Logo --------------------- */
+
+.logo {
+    color: #000;
+    display: block;
+    line-height: 1;
+    text-decoration: none
+}
+
+.logo:hover {
+    text-decoration: underline
+}
+
+/* ---------------- Bullet pts ------------------ */
+
+.bullets {
+    /*border-bottom: 1px solid #ddd;*/
+    /*font-size: 1.4rem;*/
+    margin: 0 0 2rem 0;
+    padding: 0 0 0 2rem;
+    font-size: 100.0%;
+    line-height: 0.5;
+}
+
+.bullets p {
+    color: #581845;
+}
+
+
+/* ---------------- Summary ------------------ */
+
+.summary {
+    border-bottom: 1px solid #ddd;
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    padding: 0 0 1.5rem 0
+}
+
+.summary:last-of-type {
+    border-bottom: 0;
+    margin: 0;
+    padding: 0
+}
+
+.summary a {
+    color: #555;
+    display: block;
+    text-decoration: none
+}
+
+.summary a:hover,
+.summary a:focus,
+.summary a:active,
+.summary a:hover>*,
+.summary a:focus>*,
+.summary a:active>* {
+    color: #666
+}
+
+.summary h2 {
+    font-size: 1.2em;
+    line-height: inherit;
+    margin: 0 0 .416667em
+}
+
+.summary p {
+    margin: .5em 0
+}
+
+span.thick {
+    font-weight: bold;
 }
 
 
@@ -169,7 +254,7 @@ div.left-container {
     position: static;
 }
 
-.title {
+.logo .title {
     font-family: Courier, monospace;
     font-size: 18px;
     margin: 18px 0 1.8rem;
@@ -184,6 +269,13 @@ div.left-container {
     text-align: center;
     top: 44px;
 }
+
+/*
+.logo .mark {
+    user-select: none;
+    width: 88px
+}
+*/
 
 
 /*  ------------------------------------------
@@ -204,6 +296,15 @@ div.left-container {
     font-size: 1.4rem
 }
 
+.wide-main, 
+.wide-footer {
+    box-sizing: content-box;
+    margin: 44px auto 4rem;
+    max-width: 60rem;
+    /*padding: 0 40px;*/
+    padding: 0 0 0 140px;  /* TODO: this isn't good for small screens */ 
+    font-size: 1.4rem
+}
 
 /*  ------------------------------------------
     Meta data at the top of the article
@@ -273,6 +374,15 @@ blockquote {
     font-style: normal;
 }
 
+/*
+@font-face{
+    font-family: 'Welcomefont';
+    src: url('../emotional-rescue-font/EmotionalRescuePersonalUseRegular-PKY87.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
 [class^="i-"],
 [class*=" i-"] {
     line-height: 1;
@@ -318,6 +428,3 @@ blockquote {
     content: '\f30c'
 }
 
-
-.icon-github-circled-alt2:before { content: '\f056'; } /* '' */
-.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
