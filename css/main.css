@@ -152,24 +152,6 @@ h6,
 }
 
 
-/*
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-*/
-
-/*
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-*/
-
 
 /* ---------------- Logo --------------------- */
 
@@ -192,11 +174,18 @@ ul.posts li {
     margin: 0 0 2rem 0;
     padding: 0 0 0 2rem;
     font-size: 100.0%;
-    line-height: 0.5;
 }
 
 .bullets p {
     color: #581845;
+    margin: 0;
+}
+
+.go-right {
+    display: inline;
+    text-align: right;
+    /*width:calc(100% - 50px);*/
+    /*padding: 0 0 0 calc(50%);*/
 }
 
 
@@ -261,6 +250,7 @@ div.left-container {
 }
 
 .header {
+    /*outline-style: dotted;*/
     border-right: 1px solid #ccc;
     left: auto;
     padding: 24px 40px;
@@ -293,17 +283,20 @@ div.left-container {
 }
 
 .main {
-    font-size: 1.4rem
+    font-size: 1.4rem;
 }
 
+
+/* top right bottom left */
 .wide-main, 
 .wide-footer {
     box-sizing: content-box;
-    margin: 44px auto 4rem;
+    margin: 44px auto 4rem auto;
     max-width: 60rem;
     /*padding: 0 40px;*/
-    padding: 0 0 0 140px;  /* TODO: this isn't good for small screens */ 
-    font-size: 1.4rem
+    padding: 0 0 0 140px;   /* TODO: this isn't good for small screens */ 
+    font-size: 1.4rem;
+    /*outline-style: solid;*/
 }
 
 /*  ------------------------------------------
