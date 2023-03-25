@@ -1,10 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=roboto:300,400,500';
+
 html{
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     color: #333;
-    /*background-color: #EEEEEE;*/
-    background-color: #FAF9F6; /* off-white */
-    font-family: Georgia, serif;
+    /*background-color: #eeeeee;*/
+    background-color: #faf9f6; /* off-white */
+    font-family: georgia, serif;
     font-size: 62.5%;
     line-height: 1.375
 }
@@ -26,7 +28,7 @@ small {
     font-size: 80%
 }
 
-/* Adding hidden to a html tag will remove it */
+/* adding hidden to a html tag will remove it */
 [hidden] {
     display: none
 }
@@ -38,7 +40,7 @@ small {
 .nav-link {
     color: #121212;
     display: block;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: helvetica, arial, sans-serif;
     font-size: .8em;
     margin: 6px 0;
     text-decoration: none
@@ -94,7 +96,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: helvetica, arial, sans-serif;
     font-weight: 700;
     line-height: 1.1
 }
@@ -153,7 +155,7 @@ h6,
 
 
 
-/* ---------------- Logo --------------------- */
+/* ---------------- logo --------------------- */
 
 .logo {
     color: #000;
@@ -166,7 +168,7 @@ h6,
     text-decoration: underline
 }
 
-/* ---------------- Bullet pts ------------------ */
+/* ---------------- bullet pts ------------------ */
 
 .bullets {
     /*border-bottom: 1px solid #ddd;*/
@@ -189,7 +191,7 @@ h6,
 }
 
 
-/* ---------------- Summary ------------------ */
+/* ---------------- summary ------------------ */
 
 .summary {
     border-bottom: 1px solid #ddd;
@@ -234,17 +236,17 @@ span.thick {
 }
 
 
-/*  ------------------------------------------
-    Left container / Header
-        Static at the top of the screen
+/*  --------------------- header -------------------------
+        static at the top of the screen
 */
 
 div.left-container {
     position: static;
 }
 
+
 .logo .title {
-    font-family: Courier, monospace;
+    font-family: courier, monospace;
     font-size: 18px;
     margin: 18px 0 1.8rem;
 }
@@ -269,7 +271,7 @@ div.left-container {
 
 
 /*  ------------------------------------------
-    Right Container
+    right container
             holds the main body text 
 */
 
@@ -279,13 +281,16 @@ div.left-container {
     box-sizing: content-box;
     margin: 44px auto 4rem;
     max-width: 46rem;
-    padding: 0 40px
+    padding: 0 40px;
 }
 
 .main {
     font-size: 1.4rem;
 }
 
+.box:empty {
+    background: #3a57c7;
+}
 
 /* top right bottom left */
 .wide-main, 
@@ -294,14 +299,135 @@ div.left-container {
     margin: 44px auto 4rem auto;
     max-width: 60rem;
     /*padding: 0 40px;*/
-    padding: 0 0 0 140px;   /* TODO: this isn't good for small screens */ 
+    padding: 0 0 0 140px;   /* todo: this isn't good for small screens */ 
     font-size: 1.4rem;
     /*outline-style: solid;*/
 }
 
+.custom-highlighting::selection {
+    background-color: #c70039;
+    color: #fff;
+  }
+
+/* ----------------------- code ----------------------- */
+
+code {
+    color: #121212;
+    font-family: courier, monospace;
+    font-size: 1em
+}
+
+pre {
+    background: #fff !important;
+    /*overflow: scroll;*/
+    padding: 0;
+    font-family: monospace;
+    /*border-left: 2px solid #69c; */ /* blue left border */
+    border-left: 2px solid #c70039;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+}
+
+strong {
+    font-family: helvetica, arial, sans-serif;
+    font-size: .95em
+}
+
+var {
+    font-family: helvetica, arial, sans-serif;
+    font-weight: 600
+}
+
+data::after {
+    content: " (id " attr(value) ")";
+    display: none;
+    font-size: .8em
+}
+
+data::after:hover {
+    display: inline
+}
+
+[tab-indent] {
+    margin-left: 4rem;
+}
+
+
+/* ------------ custom scroll-bar ----------------- */
+
+.tile--custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eff1f5;
+}
+
+.tile--custom-scrollbar::-webkit-scrollbar-track{
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.tile--custom-scrollbar::-webkit-scrollbar-thumb{
+  border-radius:5px;
+  background-color:#515769;
+  border:2px solid #eff1f5
+}
+
+/* ----------- tool tips ------------------------- */
+/* Use as
+    <span class="tooltip" data-tooltip="Tooltip Content">Here</span>
+*/
+
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+
+/* tooltip box */
+.tooltip:before {
+    content: attr(data-tooltip); 
+    position: absolute;
+    width: 100px;
+    background-color: #062b45;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 0.75em;
+    visibility: hidden;
+}
+
+/* Tooltip arrow */
+.tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 75%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    opacity: 0;
+    transition: opacity .6s;
+    border-color: #062B45 transparent transparent transparent;
+    visibility: hidden;
+}
+  
+.tooltip:hover:before, .tooltip:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /*  ------------------------------------------
     Meta data at the top of the article
-
 */
 
 .meta>* {
@@ -351,9 +477,7 @@ blockquote {
     margin: 1em 2em
 }
 
-/* -------------------------------------
-    Link icons
-*/
+/* ---------------- Link icons & fonts --------------------- */
 
 @font-face {
     font-family: 'fontello';
