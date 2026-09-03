@@ -1,30 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Main from '../components/Main.astro';
-import { getCollection } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 
-const posts = await getCollection('posts');
-posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const whoAmI = await getEntry('index', 'who-am-i');
+
+if (!whoAmI) {
+  throw new Error('Missing index content: who-am-i');
+}
+
+const { Content } = await render(whoAmI);
 ---
 <Layout title="Sean Gies">
   <Main>
-    {posts.map((post) => (
-      <article class="summary" itemscope>
-        <a rel="bookmark" itemprop="url" href={`/posts/${post.slug}`}>
-          <h2 itemprop="headline">{post.data.title}</h2>
-          <p itemprop="abstract">{post.data.description}</p>
-          <small class="meta category time">
-            <span>{post.data.tags?.join(', ')}</span>
-            <span>{post.data.date.toISOString().slice(0, 10)}</span>
-          </small>
-        </a>
-      </article>
-    ))}
+    <div class='hero-name'>
+      <a href='/' __target='blank'>seán gies</a>
+    </div>
+    <div class='who-am-i'>
+      <Content />
+    </div>
   </Main>
 </Layout>
 
 <style>
-  .summary {
+
+  .hero-name {
+    font-family: 'EB Garamond', helvetica, Georgia, serif;
+    padding: 4rem 0;
+    font-size: 2.5rem;
+  }
+  .hero-name a,
+  .hero-name a:hover,
+  .hero-name a:visited,
+  .hero-name a:active{
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .who-am-i{
+    font-family: 'Public Sans', helvetica, Georgia, serif;
+  }
+  .who-am-i :global(p) {
+    margin: 0.75rem 0;
+  }
+
+  /* --- OLD --- */
+  /*.summary {
     border-bottom: 1px solid #ddd;
     font-size: 1.2rem;
     margin: 10rem;
@@ -71,5 +92,5 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     color: #999;
     font-family: helvetica, arial, sans-serif;
     margin: 0 .625em 0 0;
-  }
+  }*/
 </style>

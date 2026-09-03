@@ -1,4 +1,19 @@
-@import 'https://fonts.googleapis.com/css?family=roboto:300,400,500';
+/*@import 'https://fonts.googleapis.com/css?family=roboto:300,400,500';*/
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/font/EBGaramond-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/font/PublicSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 html {
   -webkit-text-size-adjust: 100%;
