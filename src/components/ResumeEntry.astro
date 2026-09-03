@@ -12,9 +12,9 @@ const { title, subtitle, dateRange, bullets } = Astro.props;
   <span class="thick">{title}</span>
   {subtitle && <span><em>, {subtitle}</em></span>}
   <small class="go-right"><em>&nbsp; {dateRange}</em></small>
-  <div class="bullets">
-    {bullets.map((point) => <p>{point}</p>)}
-  </div>
+  <ul class="bullets">
+    {bullets.map((point) => <li>{point}</li>)}
+  </ul>
 </div>
 
 <style>

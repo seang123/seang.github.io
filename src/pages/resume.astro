@@ -20,22 +20,31 @@ const education = [
 
 const experience = [
   {
+    title: 'Synaptica',
+    dateRange: "April '23 - Nov '26",
+    bullets: [
+    'Published a research paper on the classification of functional effects of single-nucleotide-variants in ion channel genes.',
+    'Built a full-stack website as a community tool to help standarize the writing of medical reports on genetic mutations',
+    'Developed a state of the art jax-based library for markov model simulation and optimization using black box optimization algorithms',
+    'Developed a biophysical neuron optimization framework utilizing the Arbor library to fast GPU based simulations.'
+    ]
+  },
+  {
     title: 'Research Assistant',
     dateRange: "May '20 – Dec '22",
     bullets: [
-      'Performed fMRI data collection',
-      'Automated repetitive time-consuming tasks using python',
-      'Post-process dataset',
-      'Generate informative data reports on the current state of the study',
+      'Performed fMRI data collection.',
+      'Automated repetitive time-consuming data entry, cleaning, and transfer.',
+      'Generated informative data reports on the current state of the study',
     ],
   },
   {
     title: "Masters' Thesis",
     dateRange: "Feb '21 – Aug '22",
     bullets: [
-      'Applied SOTA language models to generate descriptions of viewed stimuli from brain data',
-      'Built complex-flow deep neural networks',
-      'Trained models on large >50 Gb datasets',
+      'Trained SOTA language models to generate natural language descriptions of viewed stimuli from brain data recordings.',
+      'This required complex dynamic-flow deep neural networks, combining vision and language processing',
+      'The models were trained on large (> 50GB) datasets',
     ],
   },
   {
@@ -75,17 +84,57 @@ const experience = [
 ---
 <Layout title="SG Resume">
   <Main wide>
+    <a href='/' __target='black' class='back-button'>back</a>
     <article class="single" itemscope>
-      <h1 itemprop="headline">Resume</h1>
-      <hr style="height:2px;width:20%;border-width:0;margin-top:24px;margin-left:0;color:gray;background-color:#C70039" />
+      <h1 itemprop="headline" class='headline'>Resume</h1>
 
-      <h3 underline>Education</h3>
+      <h2 class="section-heading"><span>Education</span></h2>
       {education.map((entry) => <ResumeEntry {...entry} />)}
 
-      <hr style="height:2px;width:50%;border-width:0;margin-top:24px;margin-left:0;color:gray;background-color:#C70039" />
-
-      <h3 underline>Experience</h3>
+      <h2 class="section-heading"><span>Experience</span></h2>
       {experience.map((entry) => <ResumeEntry {...entry} />)}
     </article>
   </Main>
 </Layout>
+
+<style>
+  .headline{
+    font-family: 'EB Garamond', helvetica;
+  }
+
+  .section-heading {
+    color: #292929;
+    font-family: 'EB Garamond', helvetica, sans-serif;
+    letter-spacing: .04em;
+    margin: 2.5rem 0 1.5rem;
+    position: relative;
+  }
+
+  .section-heading::before {
+    background: #c70039;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .section-heading span {
+    background: #faf9f6;
+    margin-left: 1.25rem;
+    padding: 0 .75rem;
+    position: relative;
+  }
+
+  .back-button{
+    color: rgb(216, 219, 223); /*rgb(74, 81, 91);*/
+    text-decoration: none;
+  }
+  .back-button:hover{
+    text-decoration: underline;
+    color: rgb(74, 81, 91);
+    cursor: pointer;
+  }
+</style>

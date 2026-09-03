@@ -19,6 +19,10 @@ const { Content } = await render(whoAmI);
     <div class='who-am-i'>
       <Content />
     </div>
+
+    <div class='links'>
+      <a href='/resume'>Resume</a>
+    </div>
   </Main>
 </Layout>
 
@@ -43,6 +47,14 @@ const { Content } = await render(whoAmI);
   .who-am-i :global(p) {
     margin: 0.75rem 0;
   }
+
+  .links{
+    padding: 4rem 0;
+  }
+  /*.links a{
+    color: inherit;
+    text-decoration: none;
+  }*/
 
   /* --- OLD --- */
   /*.summary {

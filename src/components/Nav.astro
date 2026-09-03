@@ -2,52 +2,34 @@
 ---
 <header class="header">
   <div class="left-container">
-    <div class="left-blurb">
-      <div class="inner">
-        <!--<a class="logo" rel="bookmark" href="/">
-          <img class="mark" src="/Figures/artificial-icon.png" title="seangies.com" alt="Sean Gies logo" />
-        </a>-->
-      </div>
-      <a class="logo" rel="bookmark" href="/">
-        <p class="title">sean gies</p>
-      </a>
-      <nav class="nav">
-        <a class="nav-link" href="/about">
-          <span>About</span>
-        </a>
-        <a class="nav-link" href="/resume">
-          <span>CV</span>
-        </a>
-        <!--<div>—</div>-->
-        <div class="social">
-          <a class="i-github" rel="noopener noreferrer" target="_blank" href="https://www.github.com/seang123" title="Github">
-            <span hidden>Github</span>
-          </a>
-          <a class="i-linkedin" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/sean-gies" title="LinkedIn">
-            <span hidden>LinkedIn</span>
-          </a>
-        </div>
-      </nav>
-    </div>
+    back
+  </div>
+  <div class="right-container">
+    <!--<span>Resume</span>-->
   </div>
 </header>
 
 <style>
   .header {
+    background-color: green;
+    box-sizing: border-box;
+    padding: 1rem;
     border-right: 1px solid #ccc;
-    left: auto;
-    padding: 24px 40px;
-    position: absolute;
-    right: calc(50% + 40px + 23rem);
     text-align: center;
-    top: 44px;
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
+    display: flex;
+    justify-content: space-between;
   }
 
   .left-container {
-    position: static;
+  }
+  .right-container{
+
   }
 
-  .logo {
+  /*.logo {
     color: #000;
     display: block;
     line-height: 1;
@@ -83,8 +65,8 @@
   .nav-link:focus span,
   .nav-link:active span,
   .nav-link.active span {
-    /*background: #f7f7f7;
-    border-radius: 4px;*/
+    background: #f7f7f7;
+    border-radius: 4px;
     text-decoration: underline;
   }
 
@@ -153,5 +135,5 @@
 
   .i-linkedin::before {
     content: '\f30c';
-  }
+  }*/
 </style>

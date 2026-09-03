@@ -20,7 +20,7 @@ html {
   background-color: #faf9f6;
   box-sizing: border-box;
   color: #333;
-  font-family: georgia, serif;
+  font-family: 'Public Sans', helvetica, georgia, serif;
   font-size: 12px; /* 62.5% */
   line-height: 1.375;
 }
