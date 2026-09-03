@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="en">
@@ -14,7 +15,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="icon" href="/Figures/artificial-icon-red-small.png" type="image/png" />
+    <link rel="icon" href={`${base}Figures/artificial-icon-red-small.png`} type="image/png" />
   </head>
   <body>
     <!--<Nav />-->

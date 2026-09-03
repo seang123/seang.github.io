@@ -10,18 +10,19 @@ if (!whoAmI) {
 }
 
 const { Content } = await render(whoAmI);
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Sean Gies">
   <Main>
     <div class='hero-name'>
-      <a href='/' __target='blank'>seán gies</a>
+      <a href={base}>seán gies</a>
     </div>
     <div class='who-am-i'>
       <Content />
     </div>
 
     <div class='links'>
-      <a href='/resume'>Resume</a>
+      <a href={`${base}resume`}>Resume</a>
     </div>
 
     <div class='publications'>
