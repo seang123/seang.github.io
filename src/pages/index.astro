@@ -23,6 +23,11 @@ const { Content } = await render(whoAmI);
     <div class='links'>
       <a href='/resume'>Resume</a>
     </div>
+
+    <div class='publications'>
+      <p class='pub-title'>Publications</p>
+      <a href="https://www.nature.com/articles/s10038-026-01484-9">Gies, S., Alishbayli, A., Tiesinga, P.H.E. et al. Functional effect predictions for ion channel missense variants using a protein language model. J Hum Genet 71, 595–604 (2026). https://doi.org/10.1038/s10038-026-01484-9</a>
+    </div>
   </Main>
 </Layout>
 
@@ -51,6 +56,15 @@ const { Content } = await render(whoAmI);
   .links{
     padding: 4rem 0;
   }
+
+  .pub-title{
+    font-family: 'EB Garamond', helvetica, Georgia, serif;
+    font-size: 2rem;
+  }
+  .publications{
+    padding: 4rem 0;
+  }
+
   /*.links a{
     color: inherit;
     text-decoration: none;
