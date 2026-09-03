@@ -1,0 +1,150 @@
+@import 'https://fonts.googleapis.com/css?family=roboto:300,400,500';
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: #faf9f6;
+  box-sizing: border-box;
+  color: #333;
+  font-family: georgia, serif;
+  font-size: 12px; /* 62.5% */
+  line-height: 1.375;
+}
+
+body {
+  font-size: 1rem;
+  margin: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+small {
+  font-size: 80%;
+}
+
+[hidden] {
+  display: none;
+}
+
+[underline] {
+  text-decoration: underline;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1,
+.h1 {
+  color: #292929;
+  font-size: 2em;
+  margin: .5em 0;
+}
+
+h2,
+.h2 {
+  color: #121212;
+  font-size: 1.5em;
+  margin: 1.333333em 0 .666667em;
+}
+
+h3,
+.h3 {
+  color: #444;
+  font-size: 1.2em;
+  margin: 1.666666em 0 .833333em;
+}
+
+h4,
+.h4 {
+  color: #444;
+  font-size: 1em;
+  letter-spacing: .025em;
+  margin: 2em 0 1em;
+  text-transform: uppercase;
+}
+
+h5,
+.h5 {
+  color: #666;
+  font-size: 1em;
+  letter-spacing: .025em;
+  margin: 2em 0 1em;
+  text-transform: uppercase;
+}
+
+h6,
+.h6 {
+  color: #666;
+  font-size: .8em;
+  letter-spacing: .025em;
+  margin: 2.5em 0 1.25em;
+  text-transform: uppercase;
+}
+
+.custom-highlighting::selection {
+  background-color: #c70039;
+  color: #fff;
+}
+
+code {
+  color: #121212;
+  font-family: courier, monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #fff !important;
+  border-left: 2px solid #c70039;
+  font-family: monospace;
+  padding: 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+strong {
+  font-family: helvetica, arial, sans-serif;
+  font-size: .95em;
+}
+
+var {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 600;
+}
+
+data::after {
+  content: ' (id ' attr(value) ')';
+  display: none;
+  font-size: .8em;
+}
+
+data:hover::after {
+  display: inline;
+}
+
+[tab-indent] {
+  margin-left: 4rem;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1em 2em;
+}

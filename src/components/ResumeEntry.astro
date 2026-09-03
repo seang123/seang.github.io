@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  dateRange: string;
+  bullets: string[];
+}
+
+const { title, subtitle, dateRange, bullets } = Astro.props;
+---
+<div class="resume-entry">
+  <span class="thick">{title}</span>
+  {subtitle && <span><em>, {subtitle}</em></span>}
+  <small class="go-right"><em>&nbsp; {dateRange}</em></small>
+  <div class="bullets">
+    {bullets.map((point) => <p>{point}</p>)}
+  </div>
+</div>
+
+<style>
+  .thick {
+    font-weight: bold;
+  }
+
+  .go-right {
+    display: inline;
+    text-align: right;
+  }
+
+  .bullets {
+    font-size: 100%;
+    margin: 0 0 2rem;
+    padding: 0 0 0 2rem;
+  }
+
+  .bullets p {
+    color: #581845;
+    margin: 0;
+  }
+</style>

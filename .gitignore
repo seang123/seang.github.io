@@ -1,5 +1,10 @@
 
 
+# Astro
+dist/
+.astro/
+node_modules/
+
 resume_export.html
 temp.html
 test.html

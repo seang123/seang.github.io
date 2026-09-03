@@ -1,0 +1,91 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Main from '../components/Main.astro';
+import ResumeEntry from '../components/ResumeEntry.astro';
+
+const education = [
+  {
+    title: 'Research MSc Computational Neuroscience (Cum Laude)',
+    subtitle: 'Radboud University, Nijmegen',
+    dateRange: '2020–2022',
+    bullets: [],
+  },
+  {
+    title: 'BSc Artificial Intelligence',
+    subtitle: 'Radboud University, Nijmegen',
+    dateRange: '2016–2020',
+    bullets: [],
+  },
+];
+
+const experience = [
+  {
+    title: 'Research Assistant',
+    dateRange: "May '20 – Dec '22",
+    bullets: [
+      'Performed fMRI data collection',
+      'Automated repetitive time-consuming tasks using python',
+      'Post-process dataset',
+      'Generate informative data reports on the current state of the study',
+    ],
+  },
+  {
+    title: "Masters' Thesis",
+    dateRange: "Feb '21 – Aug '22",
+    bullets: [
+      'Applied SOTA language models to generate descriptions of viewed stimuli from brain data',
+      'Built complex-flow deep neural networks',
+      'Trained models on large >50 Gb datasets',
+    ],
+  },
+  {
+    title: "Bachelors' Thesis",
+    dateRange: "Sep '19 – Jan '20",
+    bullets: [
+      'Implemented a method of Bayesian adaptive sampling (python)',
+      'A ML method that maximises the information gained during each sampling of a distribution',
+      'Reduces the number of experimental trials needed to collect statistically significant results',
+    ],
+  },
+  {
+    title: 'Data Pipeline',
+    dateRange: '2019',
+    bullets: [
+      'Developed a data pipeline for easily storing data across a range of cloud services',
+      'Integrated google cloud and AWS s3 file storage',
+      'Filled the scrum master position',
+    ],
+  },
+  {
+    title: 'Brain-computer interfacing',
+    dateRange: '2019',
+    bullets: [
+      'Recorded real-world BCI data from other students',
+      'Analysed data from a spelling task using the EEG headset',
+    ],
+  },
+  {
+    title: 'Big Data',
+    dateRange: '2019',
+    bullets: [
+      'Implemented a recommender-system of a large real-world shopping dataset',
+    ],
+  },
+];
+---
+<Layout title="SG Resume">
+  <Main wide>
+    <article class="single" itemscope>
+      <h1 itemprop="headline">Resume</h1>
+      <hr style="height:2px;width:20%;border-width:0;margin-top:24px;margin-left:0;color:gray;background-color:#C70039" />
+
+      <h3 underline>Education</h3>
+      {education.map((entry) => <ResumeEntry {...entry} />)}
+
+      <hr style="height:2px;width:50%;border-width:0;margin-top:24px;margin-left:0;color:gray;background-color:#C70039" />
+
+      <h3 underline>Experience</h3>
+      {experience.map((entry) => <ResumeEntry {...entry} />)}
+    </article>
+  </Main>
+</Layout>

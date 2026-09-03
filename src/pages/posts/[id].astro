@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Main from '../../components/Main.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    // strip .md extension for clean URLs: /posts/hello-world
+    params: { id: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<Layout title={post.data.title}>
+  <Main>
+    <article class="single" itemscope>
+      <h1 itemprop="headline">{post.data.title}</h1>
+      <small class="meta category time">
+        <span>{post.data.tags?.join(', ')}</span>
+        <time itemprop="datePublished" datetime={post.data.date.toISOString().slice(0, 10)}>
+          {post.data.date.toISOString().slice(0, 10)}
+        </time>
+      </small>
+      <Content />
+    </article>
+  </Main>
+</Layout>
+
+<style>
+  .meta > * {
+    color: #999;
+    font-family: helvetica, arial, sans-serif;
+    margin: 0 .625em 0 0;
+  }
+</style>

@@ -1,0 +1,157 @@
+---
+---
+<header class="header">
+  <div class="left-container">
+    <div class="left-blurb">
+      <div class="inner">
+        <!--<a class="logo" rel="bookmark" href="/">
+          <img class="mark" src="/Figures/artificial-icon.png" title="seangies.com" alt="Sean Gies logo" />
+        </a>-->
+      </div>
+      <a class="logo" rel="bookmark" href="/">
+        <p class="title">sean gies</p>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" href="/about">
+          <span>About</span>
+        </a>
+        <a class="nav-link" href="/resume">
+          <span>CV</span>
+        </a>
+        <!--<div>—</div>-->
+        <div class="social">
+          <a class="i-github" rel="noopener noreferrer" target="_blank" href="https://www.github.com/seang123" title="Github">
+            <span hidden>Github</span>
+          </a>
+          <a class="i-linkedin" rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/sean-gies" title="LinkedIn">
+            <span hidden>LinkedIn</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    border-right: 1px solid #ccc;
+    left: auto;
+    padding: 24px 40px;
+    position: absolute;
+    right: calc(50% + 40px + 23rem);
+    text-align: center;
+    top: 44px;
+  }
+
+  .left-container {
+    position: static;
+  }
+
+  .logo {
+    color: #000;
+    display: block;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    text-decoration: underline;
+  }
+
+  .title {
+    font-family: courier, monospace;
+    font-size: 18px;
+    margin: 18px 0 1.8rem;
+  }
+
+  .nav-link {
+    color: #121212;
+    display: block;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 1.125rem;
+    margin: 16px 0;
+    text-decoration: none;
+  }
+
+  .nav-link span {
+    border-radius: .234375em;
+    margin: -.3125em;
+    padding: .3125em;
+  }
+
+  .nav-link:hover span,
+  .nav-link:focus span,
+  .nav-link:active span,
+  .nav-link.active span {
+    /*background: #f7f7f7;
+    border-radius: 4px;*/
+    text-decoration: underline;
+  }
+
+  .social {
+    margin-top: 2rem;
+  }
+
+  .social a {
+    color: #777;
+    margin-right: 1em;
+  }
+
+  .social a:last-of-type {
+    margin-right: 0;
+  }
+
+  .social a:hover,
+  .social a:active,
+  .social a:focus {
+    color: #121212;
+    text-decoration: none;
+  }
+
+  @font-face {
+    font-family: 'fontello';
+    src: url('/font/fontello.woff2') format('woff2'),
+      url('/font/fontello.woff?50319861') format('woff'),
+      url('/font/fontello.ttf?50319861') format('truetype'),
+      url('/font/fontello.svg?50319861#fontello') format('svg');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  [class^='i-'],
+  [class*=' i-'] {
+    line-height: 1;
+    vertical-align: text-bottom;
+  }
+
+  [class^='i-']::before,
+  [class*=' i-']::before {
+    box-sizing: content-box;
+    direction: ltr;
+    display: inline-block;
+    font-family: 'fontello';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    overflow: hidden;
+    speak: none;
+    text-decoration: none;
+    text-rendering: auto;
+    text-transform: none;
+    white-space: nowrap;
+    width: 1em;
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .i-github::before {
+    content: '\f056';
+  }
+
+  .i-linkedin::before {
+    content: '\f30c';
+  }
+</style>
