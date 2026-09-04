@@ -10,3 +10,9 @@ tags:
 ## Hello
 
 This is my first post. More to come.
+
+```python
+  def f(a: int):
+    return a + 1
+```
+

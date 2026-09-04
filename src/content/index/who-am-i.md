@@ -16,5 +16,5 @@ Each neuron dotted with millions of tiny channels covering approximately 200 fun
 <br>
 
 I have spent the last 3 years at [Synaptica](https://synaptica.nl) developing computational methods to study these channels.
-From deep learning models, classifying single mutations in a channel as either a *gain* or *loss* of function,
+From deep learning models, classifying the functional effect of single mutations in a channel,
 to blazingly-fast markov model simulators.

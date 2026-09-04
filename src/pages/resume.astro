@@ -1,94 +1,95 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Main from '../components/Main.astro';
-import ResumeEntry from '../components/ResumeEntry.astro';
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main.astro";
+import ResumeEntry from "../components/ResumeEntry.astro";
 
 const education = [
   {
-    title: 'Research MSc Computational Neuroscience (Cum Laude)',
-    subtitle: 'Radboud University, Nijmegen',
-    dateRange: '2020–2022',
+    title: "Research MSc Computational Neuroscience (Cum Laude)",
+    subtitle: "Radboud University, Nijmegen",
+    dateRange: "2020–2022",
     bullets: [],
   },
   {
-    title: 'BSc Artificial Intelligence',
-    subtitle: 'Radboud University, Nijmegen',
-    dateRange: '2016–2020',
+    title: "BSc Artificial Intelligence",
+    subtitle: "Radboud University, Nijmegen",
+    dateRange: "2016–2020",
     bullets: [],
   },
 ];
 
 const experience = [
   {
-    title: 'Synaptica',
+    title: "Synaptica",
     dateRange: "April '23 - Nov '26",
     bullets: [
-    'Published a research paper on the classification of functional effects of single-nucleotide-variants in ion channel genes.',
-    'Built a full-stack website as a community tool to help standarize the writing of medical reports on genetic mutations',
-    'Developed a state of the art jax-based library for markov model simulation and optimization using black box optimization algorithms',
-    'Developed a biophysical neuron optimization framework utilizing the Arbor library to fast GPU based simulations.'
-    ]
+      "Published a research paper on the classification of functional effects of single-nucleotide-variants in ion channel genes.",
+      "Built a full-stack website as a community tool to help standarize the writing of medical reports on genetic mutations.",
+      "Developed a state of the art jax-based library for markov model simulation and optimization using black box optimization algorithms.",
+      "Developed a biophysical neuron optimization framework utilizing the Arbor library to fast GPU based simulations.",
+    ],
   },
   {
-    title: 'Research Assistant',
+    title: "Research Assistant",
     dateRange: "May '20 – Dec '22",
     bullets: [
-      'Performed fMRI data collection.',
-      'Automated repetitive time-consuming data entry, cleaning, and transfer.',
-      'Generated informative data reports on the current state of the study',
+      "Performed fMRI data collection.",
+      "Automated repetitive time-consuming data entry, cleaning, and transfer tasks.",
+      "Generated informative data reports on the current state of the study.",
     ],
   },
   {
     title: "Masters' Thesis",
     dateRange: "Feb '21 – Aug '22",
     bullets: [
-      'Trained SOTA language models to generate natural language descriptions of viewed stimuli from brain data recordings.',
-      'This required complex dynamic-flow deep neural networks, combining vision and language processing',
-      'The models were trained on large (> 50GB) datasets',
+      "Trained SOTA language models to generate natural language descriptions of viewed stimuli from brain data recordings.",
+      "This required complex dynamic-flow deep neural networks, combining vision and language processing.",
+      "The models were trained on large (> 50GB) datasets.",
     ],
   },
   {
     title: "Bachelors' Thesis",
     dateRange: "Sep '19 – Jan '20",
     bullets: [
-      'Implemented a method of Bayesian adaptive sampling (python)',
-      'A ML method that maximises the information gained during each sampling of a distribution',
-      'Reduces the number of experimental trials needed to collect statistically significant results',
+      "Implemented a Bayesian adaptive sampling method, used to for otimal stimuli selection in experiments.",
+      "This method maximises the information gained during each sampling of a distribution.",
+      "Reduces the number of experimental trials needed to collect statistically significant results.",
     ],
   },
   {
-    title: 'Data Pipeline',
-    dateRange: '2019',
+    title: "Data Pipeline",
+    dateRange: "2019",
     bullets: [
-      'Developed a data pipeline for easily storing data across a range of cloud services',
-      'Integrated google cloud and AWS s3 file storage',
-      'Filled the scrum master position',
+      "Developed a data pipeline to simplify storing data across multiple cloud services.",
+      "Integrated google cloud and AWS s3 file storage.",
+      "Acted as scrum master during the project.",
     ],
   },
   {
-    title: 'Brain-computer interfacing',
-    dateRange: '2019',
+    title: "Brain-computer interfacing",
+    dateRange: "2019",
     bullets: [
-      'Recorded real-world BCI data from other students',
-      'Analysed data from a spelling task using the EEG headset',
+      "Recorded real-world BCI data from other students.",
+      "Analysed data from a spelling task using the EEG headset.",
     ],
   },
   {
-    title: 'Big Data',
-    dateRange: '2019',
+    title: "Big Data",
+    dateRange: "2019",
     bullets: [
-      'Implemented a recommender-system of a large real-world shopping dataset',
+      "Implemented a recommender-system of a large real-world shopping dataset.",
     ],
   },
 ];
 
 const base = import.meta.env.BASE_URL;
 ---
+
 <Layout title="SG Resume">
   <Main wide>
-    <a href={base} class='back-button'>back</a>
+    <a href={base} class="back-button">back</a>
     <article class="single" itemscope>
-      <h1 itemprop="headline" class='headline'>Resume</h1>
+      <h1 itemprop="headline" class="headline">Resume</h1>
 
       <h2 class="section-heading"><span>Education</span></h2>
       {education.map((entry) => <ResumeEntry {...entry} />)}
@@ -100,21 +101,21 @@ const base = import.meta.env.BASE_URL;
 </Layout>
 
 <style>
-  .headline{
-    font-family: 'EB Garamond', helvetica;
+  .headline {
+    font-family: "EB Garamond", helvetica;
   }
 
   .section-heading {
     color: #292929;
-    font-family: 'EB Garamond', helvetica, sans-serif;
-    letter-spacing: .04em;
+    font-family: "EB Garamond", helvetica, sans-serif;
+    letter-spacing: 0.04em;
     margin: 2.5rem 0 1.5rem;
     position: relative;
   }
 
   .section-heading::before {
     background: #c70039;
-    content: '';
+    content: "";
     height: 2px;
     left: 0;
     position: absolute;
@@ -126,15 +127,15 @@ const base = import.meta.env.BASE_URL;
   .section-heading span {
     background: #faf9f6;
     margin-left: 1.25rem;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     position: relative;
   }
 
-  .back-button{
+  .back-button {
     color: rgb(216, 219, 223); /*rgb(74, 81, 91);*/
     text-decoration: none;
   }
-  .back-button:hover{
+  .back-button:hover {
     text-decoration: underline;
     color: rgb(74, 81, 91);
     cursor: pointer;
